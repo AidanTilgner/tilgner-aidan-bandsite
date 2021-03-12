@@ -1,0 +1,142 @@
+@use './partials/mixins' as *;
+@use './partials/variables' as *;
+
+//hero
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 40vh;
+    background-image: url('../assets/Images/hero-image.jpg');
+    background-size: cover;
+
+    &__text {
+        font-size: $h1;
+        margin: 0;
+        color: $white;
+        margin-left: 1.6rem;
+    }
+}
+
+.about {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+
+    &__header {
+        display: flex;
+        flex-direction: column;
+
+        &__title {
+            font-size: $h1;
+        }
+
+        &__image {
+            width: 100%;
+        }
+
+        &__quote {
+            font-size: $h2;
+            font-weight: 500;
+            margin: 2.4rem 0;
+        }
+
+        &__author {
+            font-size: $h3;
+            font-weight: 500;
+            margin: 0;
+            margin-top: .8rem;
+        }
+    }
+}
+
+.article {
+    margin-top: 4rem;
+
+    &__title {
+        font-size: $h2;
+        font-weight: 500;
+    }
+
+    &__paragraph {
+        font-size: $h4;
+    }
+}
+
+.gallery {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+    padding: 0 auto;
+    background-color: $off-white;
+
+    &__title {
+        font-size: $h1;
+        padding: 3.2rem 0;
+        margin: 0;
+    }
+
+    &__image {
+        width: 100%;
+        padding: .8rem 0;
+    }
+}
+
+.footer {
+    padding-inline-start: 16px;
+    background-color: $black;
+    color: $white;
+
+    &__title {
+        font-size: 44px;
+        padding-top: 6rem;
+        margin: 0;
+    }
+
+    &__icons {
+        margin: 2rem 0;
+
+        &__image {
+            height: 2.5rem;
+            padding: .5rem;
+            margin-right: 2.5rem;
+        }
+    }
+
+    &__credits {
+        margin: 3rem 0;
+
+        &__name {
+            font-size: $h3;
+            font-weight: 500;
+            
+            p {
+                padding: .2rem;
+                margin: 0;
+            }
+        }
+
+        &__address {
+            font-size: $h4;
+            margin-top: 2rem;
+
+            p {
+                padding: .2rem;
+                margin: 0;
+            }
+        }
+
+        &__email {
+            font-size: $h4;
+        }
+    }
+
+    &__copyright {
+        font-size: $h4;
+        padding-bottom: 2rem;
+
+        p {
+            padding: .2rem;
+            margin: 0;
+        }
+    }
+}
