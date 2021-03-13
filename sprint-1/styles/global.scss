@@ -46,15 +46,24 @@ body {
     color: $white;
     background-color: $black;
 
+    @include tablet {
+        flex-direction: row;
+        height: 16vh;
+    }
+
     &__title {
         font-size: $h1;
         font-weight: 300;
-        margin: 1.6rem 0;
+        margin: 2rem;
+
+        @include tablet {
+            margin: 3rem;
+        }
     }
 
     &__nav-items {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         padding-inline-start: 0px;
         box-sizing: border-box;
         width: 100%;
@@ -62,6 +71,10 @@ body {
 
         .nav-active {
             border-bottom: 6px solid $white;
+        }
+
+        @include tablet {
+            height: 100%;
         }
 
         &__nav-item {
@@ -73,11 +86,165 @@ body {
             font-weight: 500;
             padding-bottom: 1rem;
 
+
+            @include tablet {
+                margin: 1.5rem 4rem 0 4rem;
+                width: 12rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+
             &__link {
+                display: inline-block;
                 text-decoration: none;
                 color: $off-white;
+                opacity: .7;
+
+            }
+
+            .nav-link-active {
+                opacity: 1;
             }
         }
     }
 }
 
+//Footer
+.footer {
+    padding-inline-start: 16px;
+    padding-inline-end: 16px;
+    background-color: $black;
+    color: $white;
+
+    @include tablet {
+        padding-inline-start: 24px;
+        padding-inline-end: 24px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+        &__title-container {
+
+            @include tablet {
+                display: flex;
+                align-items: center;
+                width: 30%;
+            }
+
+            &__title {
+                font-size: 44px;
+                margin-top: 6rem;
+
+                @include tablet {
+                    margin: 3rem 0;
+                    font-size: $kindaBigH1;
+                }
+            }  
+        }
+
+        &__icons {
+            margin: 2rem 0;
+
+            @include tablet {
+                width: 30%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &__image {
+                height: 2.5rem;
+                padding: .5rem;
+                margin-right: 2.5rem;
+            }
+        }
+
+        &__logo-container {
+            display: none;
+
+            @include tablet {
+                width: 30%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+            &__logo {
+                @include tablet {
+                    width: 15rem;
+                    height: 4rem;
+                }
+            }    
+        }
+        
+
+        &__credits {
+
+            @include tablet {
+                margin: 2rem;
+            }
+
+            &__name {
+                font-size: $h4;
+                font-weight: 500;
+                margin-top: 2rem;
+
+                @include tablet {
+                    font-size: $h3;
+                }
+                
+                p {
+                    padding: .2rem;
+                    margin: 0;
+                }
+            }
+
+            &__address {
+                font-size: $h4;
+                margin-top: 2rem;
+
+                @include tablet {
+                    font-size: $h3;
+                }
+
+                p {
+                    padding: .2rem;
+                    margin: 0;
+                }
+            }
+
+            &__email {
+                font-size: $h4;
+
+                @include tablet {
+                    font-size: $h3;
+                }
+            }
+        }
+    }
+    
+
+    &__copyright {
+        font-size: $h4;
+        padding-bottom: 2rem;
+
+        @include tablet {
+            display: flex;
+            justify-content: flex-start;
+            font-size: $h3;
+            margin-top: 2rem;
+        }
+
+        p {
+            padding: .2rem;
+            margin: 0;
+        }
+    }
+}
