@@ -32,7 +32,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 36vh;
+  height: 18.3rem;
   background-image: url("../assets/Images/hero-image.jpg");
   background-size: cover;
   -webkit-padding-start: 1.6rem;
@@ -40,14 +40,14 @@ body {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 40rem;
     -webkit-padding-start: 2.4rem;
             padding-inline-start: 2.4rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 90vh;
+    height: 67rem;
     -webkit-padding-start: 18rem;
             padding-inline-start: 18rem;
   }
@@ -438,6 +438,7 @@ body {
     width: -webkit-fit-content;
     width: -moz-fit-content;
     width: fit-content;
+    margin-right: 1rem;
   }
 }
 .comments__comment-text__timestamp {
