@@ -1,5 +1,6 @@
 @use './partials/mixins' as *;
 @use './partials/variables' as *;
+@use './partials/typography' as *;
 
 //Setting some standards
 html {
@@ -7,7 +8,7 @@ html {
 }
 
 body {
-    font-family: 'Avenir';
+    font-family: 'Avenir', sans-serif;
     font-weight: 400;
     color: $black;
     margin: 0;
@@ -138,16 +139,15 @@ body {
             @include tablet {
                 flex-direction: row;
             }
+        }
 
-            &__paragraph {
-                font-size: $mobileh4;
-                line-height: 1.8rem;
-                margin-right: 2.4rem;
-
-                @include tablet {
-                    font-size: $h4;
-                    line-height: 2.2rem;
-                }
+        &__paragraph {
+            font-size: $mobileh4;
+            line-height: 1.8rem;
+            margin-right: 2.4rem;
+            @include tablet {
+                font-size: $h4;
+                line-height: 2.2rem;
             }
         }
     }
@@ -193,7 +193,7 @@ body {
         }
 
         &__image {
-            padding: 1rem 0;
+            padding: .5rem 0;
             width: 100%;
 
             @include tablet{
@@ -204,6 +204,7 @@ body {
             @include desktop{
                 box-sizing: border-box;
                 width: 344px;
+                margin-right: 2rem;
             }
         }
     }
@@ -213,32 +214,65 @@ body {
     padding-inline-start: 1.6rem;
     padding-inline-end: 1.6rem;
     margin-bottom: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     @include tablet {
         padding-inline-start: 12rem;
         padding-inline-end: 12rem;
     }
+    
+    @include desktop {
+        padding-inline-start: 18rem;
+        padding-inline-end: 18rem;
+    }
 
     &__title {
         font-size: $mobileh1;
+        padding: 3.2rem 0 4rem;
+        width: fit-content;
+        margin-right: auto;
 
         @include tablet {
             font-size: $h1;
             margin-left: -9.8rem;
+            padding: 3rem 0 3rem 0;
+        }
+
+        @include desktop {
+            margin: 0;
+            margin-right: auto;
         }
     }
 
     &__formContainer {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         border-bottom: 1px solid #E1E1E1;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+
+        @include desktop {
+            justify-content: space-between;
+            width: 52.8rem;
+        }
     }
 
     &__form {
         display: flex;
         flex-direction: column;
-        width: 90%;
-        padding-left: 2rem;
+        width: 22.4rem;
+        margin-left: 2rem;
+        
+        @include tablet{
+            width: 100%;
+        }
+
+        @include desktop{
+            width: 46rem;
+        }
 
         &__label {
             font-weight: 500;
@@ -251,8 +285,8 @@ body {
         }
 
         &__input {
-            font-family: 'Avenir';
-            margin-bottom: 2rem;
+            font-family: 'Avenir', sans-serif;
+            margin-bottom: 2.4rem;
             border: 1px solid #E1E1E1;
             border-radius: 3px;
             background-color: #FAFAFA;
@@ -270,40 +304,26 @@ body {
         }
 
         &__submit {
-            font-family: 'Avenir';
+            font-family: 'Avenir', sans-serif;
             font-weight: 500;
             color: white;
             background-color: $black;
             border: none;
             border-radius: 5px;
             padding: 1.5rem;
-            margin-bottom: 2rem;
+            margin-bottom: 3.2rem;
 
             @include tablet {
-                width: 15rem;
+                width: 35%;
                 margin-left: auto;
-                padding: 1.6rem 2rem;
+                padding: 1.5rem 2rem;
             }
         }
     }
 
-    &__profile-pic {
-        margin-top: 1rem;
-        width: 3.5rem;
-        height: 3.5rem;
-        border-radius: 50%;
-        background-color: #E1E1E1;
-
-        @include tablet{
-            width: 4rem;
-            height: 4rem;
-            margin-top: 1.3rem;
-        }
-    }
-
     &__user-profile-pic {
-        width: 4.2rem;
-        height: 4.2rem;
+        width: 4.8rem;
+        height: 4.8rem;
         margin-top: 1.5rem;
         border-radius: 50%;
         background-image: url('../assets/Images/Mohan-muruge.jpg');
@@ -321,20 +341,58 @@ body {
         justify-content: space-between;
         border-bottom: 1px solid #E1E1E1;
         padding: 1rem 0;
+
+        @include desktop{
+            width: 52.8rem;
+        }
+    }
+
+    &__profile-pic {
+        margin-top: 2.4rem;
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+        background-color: #E1E1E1;
+
+        @include tablet{
+            width: 4rem;
+            height: 4rem;
+            margin-top: 1.3rem;
+        }
     }
 
     &__comment-text {
         width: 90%;
-        padding-left: 2rem;
         position: relative;
-        font-size: $mobileh4;
+        font-size: $mobileh2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        flex-wrap: nowrap;
+        margin: 2.4rem 0;
+        padding: 0;
+        margin-left: 1.6rem;
+
+        *{
+            margin: 0;
+        }
 
         @include tablet {
             font-size: $h3;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
         }
 
         &__name {
             font-weight: 500;
+            margin-bottom: 1.6rem;
+
+            @include tablet{
+                width: fit-content;
+            }
+            
         }
 
         &__comment {
@@ -348,7 +406,8 @@ body {
             color: #AFAFAF;
 
             @include tablet{
-                
+                position: relative;
+                margin-bottom: 1.6rem;
             }
         }
     }
