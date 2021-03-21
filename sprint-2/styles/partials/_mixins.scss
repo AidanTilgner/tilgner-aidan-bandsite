@@ -11,3 +11,12 @@
         @content;
     }
 }
+
+@mixin font-face($font-family, $font-weight, $file-path){
+    @font-face {
+        font-family: $font-family, sans-serif;
+        src: url($file-path), format('opentype');
+        font-weight: $font-weight;
+        font-size: normal;
+    }
+}

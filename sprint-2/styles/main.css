@@ -1,9 +1,27 @@
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/global-fonts/avenirNextLTPro-Light.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/global-fonts/avenirNextLTPro-Demi.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url("../../assets/global-fonts/avenirNextLTPro-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 html {
   font-size: 10px;
 }
 
 body {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   font-weight: 400;
   color: #323232;
   margin: 0;
@@ -14,7 +32,7 @@ body {
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: 36vh;
+  height: 18.3rem;
   background-image: url("../assets/Images/hero-image.jpg");
   background-size: cover;
   -webkit-padding-start: 1.6rem;
@@ -22,14 +40,14 @@ body {
 }
 @media (min-width: 768px) {
   .hero {
-    height: 80vh;
+    height: 40rem;
     -webkit-padding-start: 2.4rem;
             padding-inline-start: 2.4rem;
   }
 }
 @media (min-width: 1280px) {
   .hero {
-    height: 90vh;
+    height: 67rem;
     -webkit-padding-start: 18rem;
             padding-inline-start: 18rem;
   }
@@ -147,13 +165,13 @@ body {
     flex-direction: row;
   }
 }
-.about__article__paragraph-container__paragraph {
+.about__article__paragraph {
   font-size: 13px;
   line-height: 1.8rem;
   margin-right: 2.4rem;
 }
 @media (min-width: 768px) {
-  .about__article__paragraph-container__paragraph {
+  .about__article__paragraph {
     font-size: 14px;
     line-height: 2.2rem;
   }
@@ -208,7 +226,7 @@ body {
   }
 }
 .gallery__image-container__image {
-  padding: 1rem 0;
+  padding: 0.5rem 0;
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -221,6 +239,7 @@ body {
   .gallery__image-container__image {
     box-sizing: border-box;
     width: 344px;
+    margin-right: 2rem;
   }
 }
 
@@ -230,6 +249,9 @@ body {
   -webkit-padding-end: 1.6rem;
           padding-inline-end: 1.6rem;
   margin-bottom: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 @media (min-width: 768px) {
   .comments {
@@ -239,25 +261,64 @@ body {
             padding-inline-end: 12rem;
   }
 }
+@media (min-width: 1280px) {
+  .comments {
+    -webkit-padding-start: 18rem;
+            padding-inline-start: 18rem;
+    -webkit-padding-end: 18rem;
+            padding-inline-end: 18rem;
+  }
+}
 .comments__title {
   font-size: 24px;
+  padding: 3.2rem 0 4rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-right: auto;
 }
 @media (min-width: 768px) {
   .comments__title {
     font-size: 36px;
     margin-left: -9.8rem;
+    padding: 3rem 0 3rem 0;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__title {
+    margin: 0;
+    margin-right: auto;
   }
 }
 .comments__formContainer {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   border-bottom: 1px solid #E1E1E1;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+@media (min-width: 1280px) {
+  .comments__formContainer {
+    justify-content: space-between;
+    width: 52.8rem;
+  }
 }
 .comments__form {
   display: flex;
   flex-direction: column;
-  width: 90%;
-  padding-left: 2rem;
+  width: 22.4rem;
+  margin-left: 2rem;
+}
+@media (min-width: 768px) {
+  .comments__form {
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .comments__form {
+    width: 46rem;
+  }
 }
 .comments__form__label {
   font-weight: 500;
@@ -270,8 +331,8 @@ body {
   }
 }
 .comments__form__input {
-  font-family: "Avenir";
-  margin-bottom: 2rem;
+  font-family: "Avenir", sans-serif;
+  margin-bottom: 2.4rem;
   border: 1px solid #E1E1E1;
   border-radius: 3px;
   background-color: #FAFAFA;
@@ -288,39 +349,25 @@ body {
   border: 2px solid #323232;
 }
 .comments__form__submit {
-  font-family: "Avenir";
+  font-family: "Avenir", sans-serif;
   font-weight: 500;
   color: white;
   background-color: #323232;
   border: none;
   border-radius: 5px;
   padding: 1.5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3.2rem;
 }
 @media (min-width: 768px) {
   .comments__form__submit {
-    width: 15rem;
+    width: 35%;
     margin-left: auto;
-    padding: 1.6rem 2rem;
-  }
-}
-.comments__profile-pic {
-  margin-top: 1rem;
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background-color: #E1E1E1;
-}
-@media (min-width: 768px) {
-  .comments__profile-pic {
-    width: 4rem;
-    height: 4rem;
-    margin-top: 1.3rem;
+    padding: 1.5rem 2rem;
   }
 }
 .comments__user-profile-pic {
-  width: 4.2rem;
-  height: 4.2rem;
+  width: 4.8rem;
+  height: 4.8rem;
   margin-top: 1.5rem;
   border-radius: 50%;
   background-image: url("../assets/Images/Mohan-muruge.jpg");
@@ -339,19 +386,60 @@ body {
   border-bottom: 1px solid #E1E1E1;
   padding: 1rem 0;
 }
+@media (min-width: 1280px) {
+  .comments__comment-container {
+    width: 52.8rem;
+  }
+}
+.comments__profile-pic {
+  margin-top: 2.4rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  background-color: #E1E1E1;
+}
+@media (min-width: 768px) {
+  .comments__profile-pic {
+    width: 4rem;
+    height: 4rem;
+    margin-top: 1.3rem;
+  }
+}
 .comments__comment-text {
   width: 90%;
-  padding-left: 2rem;
   position: relative;
-  font-size: 13px;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  margin: 2.4rem 0;
+  padding: 0;
+  margin-left: 1.6rem;
+}
+.comments__comment-text * {
+  margin: 0;
 }
 @media (min-width: 768px) {
   .comments__comment-text {
     font-size: 16px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
 .comments__comment-text__name {
   font-weight: 500;
+  margin-bottom: 1.6rem;
+}
+@media (min-width: 768px) {
+  .comments__comment-text__name {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin-right: 1rem;
+  }
 }
 .comments__comment-text__timestamp {
   position: absolute;
@@ -359,14 +447,23 @@ body {
   top: 0rem;
   color: #AFAFAF;
 }
+@media (min-width: 768px) {
+  .comments__comment-text__timestamp {
+    position: relative;
+    margin-bottom: 1.6rem;
+  }
+}
+
 ::-moz-placeholder {
   color: #323232;
   font-weight: 400;
 }
+
 :-ms-input-placeholder {
   color: #323232;
   font-weight: 400;
 }
+
 ::placeholder {
   color: #323232;
   font-weight: 400;

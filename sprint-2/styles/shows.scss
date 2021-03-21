@@ -1,0 +1,267 @@
+@use './partials/mixins' as *;
+@use './partials/typography' as *;
+@use './partials/variables' as *;
+
+//hero
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    height: 47.2rem;
+    background-image: url('../assets/Images/synth-wave-sun.jpg');
+    background-size: cover;
+    background-position: center;
+    padding-inline-start: 1.6rem;
+    color: $white;
+
+    @include tablet {
+        height: 67rem;
+        padding-inline-start: 2.4rem;
+    }
+
+    @include desktop {
+        height: 67rem;
+        padding-inline-start: 18rem;
+    }
+
+    &__album-name{
+        font-size: $mobileh2;
+        font-weight: 500;
+
+        @include tablet{
+            font-size: $h2;
+        }
+    }
+
+    &__text {
+        font-size: $mobileh1;
+        margin: 0;
+        color: $white;
+        margin-bottom: 6.4rem;
+
+        @include tablet {
+            font-size: $heroH1;
+        }
+    }
+
+    &__soundcloud-player{
+        width: 90%;
+        height: 10rem;
+
+        @include tablet{
+            width: 60%;
+            height: 15rem;
+        }
+    }
+}
+
+.shows {
+    padding-inline-start: 1.6rem;
+    padding-inline-end: 1.6rem;
+
+    @include tablet {
+        padding-inline-start: 2.4rem;
+        padding-inline-end: 2.4rem;
+    }
+
+    @include desktop {
+        padding-inline-start: 18rem;
+        padding-inline-end: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    &__title{
+        font-size: $mobileh1;
+        margin-top: 3.2rem;
+        margin-bottom: 4rem;
+
+        @include tablet{
+            font-size: $h1;
+        }
+
+        @include desktop {
+            width: fit-content;
+            position: absolute;
+            left: 18rem;
+            margin-top: 4.8rem;
+        }
+    }
+
+    &__pinned-label-container{
+        display: none;
+        position: relative;
+        height: 3rem;
+
+        @include tablet {
+            display: inline-block;
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 80%;
+            margin-top: 3.2rem;
+        }
+    }
+
+    &__show-list{
+        position: relative;
+        margin-bottom: 4rem;
+
+        @include desktop {
+            width: 80%;
+        }
+    }
+
+    &__show{
+        border-bottom: 1px solid #E1E1E1;
+
+        @include tablet{
+            display: flex;
+            align-items: center;
+            height: 8rem;
+        }
+
+        &__date{
+            margin-bottom: 2.4rem;
+
+            @include tablet {
+                margin: 0;
+                width: 25%;
+            }
+        }
+
+        &__venue{
+            margin-bottom: 2.4rem;
+
+            @include tablet{
+                margin: 0;
+                width: 25%;
+            }
+        }
+
+        &__location{
+            margin-bottom: 3.2rem;
+
+            @include tablet {
+                margin: 0;
+                width: 25%;
+            }
+        }
+
+        &__buy-tickets-button{
+            font-family: 'Avenir', sans-serif;
+            font-weight: 500;
+            color: white;
+            background-color: $black;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            padding: 1.5rem;
+            margin-bottom: 1.6rem;
+
+            @include tablet{
+                width: 16rem;
+                margin-left: auto;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__label{
+
+        &__date{
+            color: #AFAFAF;
+            font-weight: 500;
+
+            @include tablet{
+                display: none;
+            }
+
+            &-pin{
+                color: #AFAFAF;
+                font-weight: 500;
+                display: none;
+
+                @include tablet{
+                    display: inline-block;
+                    position: absolute;
+                    left: 0;
+                    font-size: $h4;
+                }
+            }
+        }
+
+        &__venue{
+            color: #AFAFAF;
+            font-weight: 500;
+
+            @include tablet{
+                display: none;
+            }
+
+            &-pin{
+                display: none;
+                color: #AFAFAF;
+                font-weight: 500;
+
+                @include tablet{
+                    display: inline-block;
+                    position: absolute;
+                    left: 25%;
+                    font-size: $h4;
+                }
+            }
+        }
+
+        &__location{
+            color: #AFAFAF;
+            font-weight: 500;
+
+            @include tablet{
+                display: none;
+            }
+
+            &-pin{
+                display: none;
+                color: #AFAFAF;
+                font-weight: 500;
+
+                @include tablet{
+                    display: inline-block;
+                    position: absolute;
+                    left: 50%;
+                    font-size: $h4;
+                }
+            }
+        }
+    }
+
+    &__text {
+
+        &__date{
+            font-weight: 500;
+            font-size: $mobileh2;
+
+            @include tablet {
+                font-size: $h3;
+            }
+        }
+
+        &__venue{
+
+            @include tablet{
+                font-size: $h4;
+            }
+        }
+
+        &__location{
+
+            @include tablet{
+                font-size: $h4;
+            }
+        }
+    }
+}

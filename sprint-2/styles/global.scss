@@ -1,28 +1,7 @@
-//set font for all pages
-
 @use './partials/variables' as *;
 @use './partials/mixins' as *;
+@use './partials/typography' as *;
 
-@font-face {
-    font-family: 'Avenir';
-    src: url("../assets/global-fonts/Linotype\ -\ AvenirNextLTPro-Light.otf") format("opentype");
-    font-weight: 400;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Avenir';
-    src: url("../assets/global-fonts/Linotype\ -\ AvenirNextLTPro-Demi.otf") format("opentype");
-    font-weight: 500;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Avenir';
-    src: url("../assets/global-fonts/Linotype\ -\ AvenirNextLTPro-Bold.otf") format("opentype");
-    font-weight: 700;
-    font-style: normal;
-}
 
 html {
     font-size: 10px;
@@ -36,10 +15,6 @@ body {
 }
 
 //Apply border to get reference of elements
-* {
-    // box-sizing: border-box;
-    // border: 1px solid rgba($color: #96ff8d, $alpha: .3);
-}
 
 //navbar for all pages
 .nav {
@@ -61,7 +36,6 @@ body {
     }
 
     &__title {
-        font-size: $mobileh1;
         font-weight: 300;
         padding-top: 1.6rem;
         margin: 0;
@@ -78,12 +52,17 @@ body {
         }
 
         &__link {
-            text-decoration: none;
-            color: $white;
+            display: inline-block;
+        }
+
+        &__image {
+            height: 2rem;
+            padding: 1.5rem;
         }
     }
 
     &__nav-items {
+        box-sizing: border-box;
         display: flex;
         padding: 0;
         margin: 0;
@@ -92,6 +71,10 @@ body {
         
         .nav-active {
             border-bottom: 6px solid $white;
+
+            @include desktop{
+                padding-top: 2rem;
+            }
         }
 
         @include tablet {
@@ -101,13 +84,11 @@ body {
         &__nav-item {
             width: 50%;
             text-align: center;
-            font-size: $mobileh2;
             font-weight: 500;
             padding-bottom: 1rem;
 
 
             @include tablet {
-                font-size: $h2;
                 padding-top: 1.5rem;
                 margin: 0 4rem;
                 width: 14rem;
@@ -122,16 +103,21 @@ body {
                 margin-right: 5.6rem;
             }
 
-            &__link {
-                display: inline-block;
-                text-decoration: none;
-                color: $off-white;
-                opacity: .7;
-
-            }
-
             .nav-link-active {
                 opacity: 1;
+            }
+        }
+
+        &__link {
+            display: inline-block;
+            text-decoration: none;
+            color: $off-white;
+            opacity: .7;
+            font-size: $mobileh2;
+            font-weight: 500;
+
+            @include tablet {
+                font-size: $h2;
             }
         }
     }
@@ -167,6 +153,7 @@ body {
         @include desktop {
             justify-content: flex-start;
         }
+    }
 
         &__title-container {
             margin: 6rem 0 0 0;
@@ -181,22 +168,22 @@ body {
             @include desktop {
                 width: 25%;
             }
-
-            &__title {
-                font-size: $h1;
-                padding: 0;
-                margin: 0;
-
-                @include tablet {
-                    margin: 4rem 0;
-                    font-size: 3.6rem;
-                }
-
-                @include desktop {
-                    font-size: 3.2rem;
-                }
-            }  
         }
+
+        &__title {
+            font-size: $h1;
+            padding: 0;
+            margin: 0;
+
+            @include tablet {
+                margin: 4rem 0;
+                font-size: 3.6rem;
+            }
+            
+            @include desktop {
+                font-size: 3.2rem;
+            }
+        }  
 
         &__icon-container {
             margin: 2rem 0;
@@ -210,13 +197,18 @@ body {
 
             @include desktop {
                 width: 25%;
-                justify-content: flex-start;
+                justify-content: space-between;
             }
 
             &__image {
                 height: 2rem;
                 padding: 1rem;
                 margin-right: 1.5rem;
+
+                @include desktop{
+                    margin-right: 3.2rem;
+                    padding: 0;
+                }
             }
         }
 
@@ -309,7 +301,6 @@ body {
                 }
             }
         }
-    }
     
 
     &__copyright {

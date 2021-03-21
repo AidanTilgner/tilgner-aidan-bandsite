@@ -64,8 +64,8 @@ function loadCommentSection(){
     appendToElement('.comments__comment-container', '.comments__profile-pic');
     appendToElement('.comments__comment-container', '.comments__comment-text');
     appendToElement('.comments__comment-text', '.comments__comment-text__name');
-    appendToElement('.comments__comment-text', '.comments__comment-text__comment');
     appendToElement('.comments__comment-text', '.comments__comment-text__timestamp');
+    appendToElement('.comments__comment-text', '.comments__comment-text__comment');
 
 
     //functions to add text to comments
@@ -76,13 +76,6 @@ function loadCommentSection(){
         }
     }
 
-    function modifyCommentText(){
-        let targetElement = document.querySelectorAll('.comments__comment-text__comment');
-        for (let i = 0; i < targetElement.length; i++){
-            targetElement[i].innerText = comments[i].comment;
-        }
-    }
-
     function modifyTimestampText(){
         let targetElement = document.querySelectorAll('.comments__comment-text__timestamp');
         for (let i = 0; i < targetElement.length; i++){
@@ -90,10 +83,17 @@ function loadCommentSection(){
         }
     }
 
+    function modifyCommentText(){
+        let targetElement = document.querySelectorAll('.comments__comment-text__comment');
+        for (let i = 0; i < targetElement.length; i++){
+            targetElement[i].innerText = comments[i].comment;
+        }
+    }
+
     //runs functions to add text
     modifyNameText();
-    modifyCommentText();
     modifyTimestampText();
+    modifyCommentText();
 }
 
 //loads initial comment section
