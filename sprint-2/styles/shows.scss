@@ -65,6 +65,14 @@
         padding-inline-end: 2.4rem;
     }
 
+    @include desktop {
+        padding-inline-start: 18rem;
+        padding-inline-end: 18rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
     &__title{
         font-size: $mobileh1;
         margin-top: 3.2rem;
@@ -73,28 +81,42 @@
         @include tablet{
             font-size: $h1;
         }
+
+        @include desktop {
+            width: fit-content;
+            position: absolute;
+            left: 18rem;
+            margin-top: 4.8rem;
+        }
     }
 
     &__pinned-label-container{
+        display: none;
         position: relative;
         height: 3rem;
+
+        @include tablet {
+            display: inline-block;
+            width: 100%;
+        }
+
+        @include desktop {
+            width: 80%;
+            margin-top: 3.2rem;
+        }
     }
 
     &__show-list{
         position: relative;
+        margin-bottom: 4rem;
+
+        @include desktop {
+            width: 80%;
+        }
     }
 
     &__show{
         border-bottom: 1px solid #E1E1E1;
-
-        // >*{
-        //     border: 1px solid blue;
-        //     margin: 0;
-        // }
-
-        // >*>*{
-        //     border: 1px solid purple;
-        // }
 
         @include tablet{
             display: flex;
@@ -141,7 +163,7 @@
             margin-bottom: 1.6rem;
 
             @include tablet{
-                width: 15rem;
+                width: 16rem;
                 margin-left: auto;
                 margin-bottom: 0;
             }

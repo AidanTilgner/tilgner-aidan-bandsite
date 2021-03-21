@@ -88,6 +88,17 @@
             padding-inline-end: 2.4rem;
   }
 }
+@media (min-width: 1280px) {
+  .shows {
+    -webkit-padding-start: 18rem;
+            padding-inline-start: 18rem;
+    -webkit-padding-end: 18rem;
+            padding-inline-end: 18rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+}
 .shows__title {
   font-size: 24px;
   margin-top: 3.2rem;
@@ -98,12 +109,41 @@
     font-size: 36px;
   }
 }
+@media (min-width: 1280px) {
+  .shows__title {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    position: absolute;
+    left: 18rem;
+    margin-top: 4.8rem;
+  }
+}
 .shows__pinned-label-container {
+  display: none;
   position: relative;
   height: 3rem;
 }
+@media (min-width: 768px) {
+  .shows__pinned-label-container {
+    display: inline-block;
+    width: 100%;
+  }
+}
+@media (min-width: 1280px) {
+  .shows__pinned-label-container {
+    width: 80%;
+    margin-top: 3.2rem;
+  }
+}
 .shows__show-list {
   position: relative;
+  margin-bottom: 4rem;
+}
+@media (min-width: 1280px) {
+  .shows__show-list {
+    width: 80%;
+  }
 }
 .shows__show {
   border-bottom: 1px solid #E1E1E1;
@@ -155,7 +195,7 @@
 }
 @media (min-width: 768px) {
   .shows__show__buy-tickets-button {
-    width: 15rem;
+    width: 16rem;
     margin-left: auto;
     margin-bottom: 0;
   }
