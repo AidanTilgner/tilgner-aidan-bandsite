@@ -13,16 +13,20 @@
     background-size: cover;
     background-position: center;
     padding-inline-start: 1.6rem;
+    padding-inline-end: 1.6rem;
     color: $white;
 
     @include tablet {
         height: 67rem;
         padding-inline-start: 2.4rem;
+        padding-inline-end: 2.4rem;
     }
 
     @include desktop {
         height: 67rem;
         padding-inline-start: 18rem;
+        padding-inline-end: 18rem;
+        flex-wrap: wrap;
     }
 
     &__album-name{
@@ -43,6 +47,11 @@
         @include tablet {
             font-size: $heroH1;
         }
+
+        @include desktop {
+            box-sizing: border-box;
+            width: 50%;
+        }
     }
 
     &__soundcloud-player{
@@ -52,6 +61,11 @@
         @include tablet{
             width: 60%;
             height: 15rem;
+        }
+
+        @include desktop {
+            width: 40%;
+            margin: 100% 0 100% 0;
         }
     }
 }
@@ -133,7 +147,7 @@
             }
         }
 
-        &__venue{
+        &__place{
             margin-bottom: 2.4rem;
 
             @include tablet{
@@ -194,7 +208,7 @@
             }
         }
 
-        &__venue{
+        &__place{
             color: #AFAFAF;
             font-weight: 500;
 
@@ -250,7 +264,7 @@
             }
         }
 
-        &__venue{
+        &__place{
 
             @include tablet{
                 font-size: $h4;
