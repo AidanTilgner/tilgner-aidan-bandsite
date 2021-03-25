@@ -250,7 +250,7 @@ body {
           padding-inline-end: 1.6rem;
   margin-bottom: 4rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: column-reverse;
   align-items: center;
 }
 @media (min-width: 768px) {
@@ -276,6 +276,7 @@ body {
   width: -moz-fit-content;
   width: fit-content;
   margin-right: auto;
+  order: 3;
 }
 @media (min-width: 768px) {
   .comments__title {
@@ -297,6 +298,7 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+  order: 2;
 }
 @media (min-width: 1280px) {
   .comments__formContainer {
@@ -385,6 +387,7 @@ body {
   justify-content: space-between;
   border-bottom: 1px solid #E1E1E1;
   padding: 1rem 0;
+  width: 100%;
 }
 @media (min-width: 1280px) {
   .comments__comment-container {
@@ -451,7 +454,22 @@ body {
   .comments__comment-text__timestamp {
     position: relative;
     margin-bottom: 1.6rem;
+    margin-right: 1.6rem;
   }
+}
+@media (min-width: 768px) {
+  .comments__comment-text__comment {
+    width: 100%;
+  }
+}
+.comments__comment-text__delete {
+  height: 1.6rem;
+  width: 1.6rem;
+  margin-top: 1.6rem;
+  opacity: 0.6;
+}
+.comments__comment-text__delete:hover {
+  opacity: 1;
 }
 
 ::-moz-placeholder {

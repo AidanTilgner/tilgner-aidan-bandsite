@@ -27,6 +27,8 @@
   background-position: center;
   -webkit-padding-start: 1.6rem;
           padding-inline-start: 1.6rem;
+  -webkit-padding-end: 1.6rem;
+          padding-inline-end: 1.6rem;
   color: #ffffff;
 }
 @media (min-width: 768px) {
@@ -34,6 +36,8 @@
     height: 67rem;
     -webkit-padding-start: 2.4rem;
             padding-inline-start: 2.4rem;
+    -webkit-padding-end: 2.4rem;
+            padding-inline-end: 2.4rem;
   }
 }
 @media (min-width: 1280px) {
@@ -41,6 +45,9 @@
     height: 67rem;
     -webkit-padding-start: 18rem;
             padding-inline-start: 18rem;
+    -webkit-padding-end: 18rem;
+            padding-inline-end: 18rem;
+    flex-wrap: wrap;
   }
 }
 .hero__album-name {
@@ -63,6 +70,12 @@
     font-size: 60px;
   }
 }
+@media (min-width: 1280px) {
+  .hero__text {
+    box-sizing: border-box;
+    width: 50%;
+  }
+}
 .hero__soundcloud-player {
   width: 90%;
   height: 10rem;
@@ -71,6 +84,12 @@
   .hero__soundcloud-player {
     width: 60%;
     height: 15rem;
+  }
+}
+@media (min-width: 1280px) {
+  .hero__soundcloud-player {
+    width: 40%;
+    margin: 100% 0 100% 0;
   }
 }
 
@@ -164,11 +183,11 @@
     width: 25%;
   }
 }
-.shows__show__venue {
+.shows__show__place {
   margin-bottom: 2.4rem;
 }
 @media (min-width: 768px) {
-  .shows__show__venue {
+  .shows__show__place {
     margin: 0;
     width: 25%;
   }
@@ -222,22 +241,22 @@
     font-size: 14px;
   }
 }
-.shows__label__venue {
+.shows__label__place {
   color: #AFAFAF;
   font-weight: 500;
 }
 @media (min-width: 768px) {
-  .shows__label__venue {
+  .shows__label__place {
     display: none;
   }
 }
-.shows__label__venue-pin {
+.shows__label__place-pin {
   display: none;
   color: #AFAFAF;
   font-weight: 500;
 }
 @media (min-width: 768px) {
-  .shows__label__venue-pin {
+  .shows__label__place-pin {
     display: inline-block;
     position: absolute;
     left: 25%;
@@ -276,7 +295,7 @@
   }
 }
 @media (min-width: 768px) {
-  .shows__text__venue {
+  .shows__text__place {
     font-size: 14px;
   }
 }
