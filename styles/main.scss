@@ -65,53 +65,53 @@ body {
         display: flex;
         flex-direction: column;
 
-        &__title {
-            font-size: $mobileh1;
-            padding-top: 1rem;
+    }
 
-            @include tablet {
-                font-size: $h1;
-            }
-            
+    &__title {
+        font-size: $mobileh1;
+        padding-top: 1rem;
+
+        @include tablet {
+            font-size: $h1;
         }
+        
+    }
 
-        &__image {
+    &__image {
+        @include desktop {
+            padding: 0 10rem;
+        } 
+    }
 
-            @include desktop {
-                padding: 0 10rem;
-            } 
-        }
+    &__quote {
+        font-size: $mobileh2;
+        line-height: 2.2rem;
+        font-weight: 500;
+        margin: 2.4rem 0;
 
-        &__quote {
-            font-size: $mobileh2;
+        @include tablet {
+            font-size: $h2;
+            font-weight: 700;
             line-height: 2.2rem;
-            font-weight: 500;
-            margin: 2.4rem 0;
-
-            @include tablet {
-                font-size: $h2;
-                font-weight: 700;
-                line-height: 2.2rem;
-            }
-
-            @include desktop {
-                padding: 0 10rem;
-            }
         }
 
-        &__author {
-            font-size: $mobileh4;
-            font-weight: 500;
-            margin: 0;
-            margin-top: .8rem;
+        @include desktop {
+            padding: 0 10rem;
+        }
+    }
 
-            @include tablet {
-                font-size: $h3;
-            }
+    &__author {
+        font-size: $mobileh4;
+        font-weight: 500;
+        margin: 0;
+        margin-top: .8rem;
 
-            @include desktop {
-                padding: 0 10rem;
-            }
+        @include tablet {
+            font-size: $h3;
+
+        }
+        @include desktop {
+            padding: 0 10rem;
         }
     }
 
@@ -122,33 +122,32 @@ body {
             padding: 0 10rem;
         }
 
-        &__title {
-            font-size: $mobileh2;
-            font-weight: 500;
-
-            @include tablet {
-                font-size: $h2;
-                font-weight: 700;
-            }
+    }
+    
+    &__title {
+        font-size: $mobileh2;
+        font-weight: 500;
+        @include tablet {
+            font-size: $h2;
+            font-weight: 700;
         }
+    }
 
-        &__paragraph-container {
-            display: flex;  
-            flex-direction: column;
-
-            @include tablet {
-                flex-direction: row;
-            }
+    &__paragraph-container {
+        display: flex;  
+        flex-direction: column;
+        @include tablet {
+            flex-direction: row;
         }
+    }
 
-        &__paragraph {
-            font-size: $mobileh4;
-            line-height: 1.8rem;
-            margin-right: 2.4rem;
-            @include tablet {
-                font-size: $h4;
-                line-height: 2.2rem;
-            }
+    &__paragraph {
+        font-size: $mobileh4;
+        line-height: 1.8rem;
+        margin-right: 2.4rem;
+        @include tablet {
+            font-size: $h4;
+            line-height: 2.2rem;
         }
     }
 }
@@ -321,6 +320,10 @@ body {
                 padding: 1.5rem 2rem;
             }
         }
+    }
+
+    &__textarea{
+        height: 10rem;
     }
 
     &__user-profile-pic {

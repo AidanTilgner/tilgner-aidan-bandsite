@@ -11,13 +11,13 @@
 <body>
     <header>
         <nav class="nav">
-            <a href="./index.html" class="nav__title__link"><img src="./assets/Logo/Logo-bandsite.svg" alt="" class="nav__title__image"></a>
+            <a href="./index.html" class="nav__link"><img src="./assets/Logo/Logo-bandsite.svg" alt="" class="nav__image"></a>
             <ul class="nav__nav-items">
-                <li class="nav__nav-items__nav-item nav-active">
-                    <a href="./index.html" class="nav__nav-items__link nav-link-active">Biography</a>
+                <li class="nav__nav-item nav-active">
+                    <a href="./index.html" class="nav__link nav-link-active">Biography</a>
                 </li>
-                <li class="nav__nav-items__nav-item">
-                    <a href="./pages/shows.html" class="nav__nav-items__link">Shows</a>
+                <li class="nav__nav-item">
+                    <a href="./pages/shows.html" class="nav__link">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -30,22 +30,22 @@
         <section class="about__header">
             <h2 class="about__header__title">About The Musicians</h2>
             <img src="./assets/Images/about-image.jpg" alt="Image" class="about__header__image">
-            <p class="about__header__quote">
+            <p class="about__quote">
                 "We are more comfortable with not
                 fighting what comes naturally. Before
                 we might have thought, 'We need to
                 be smarter than this"
             </p>
-            <p class="about__header__author">
+            <p class="about__author">
                 - Xavier de Rosnay
             </p>
         </section>
         <section class="about__article">
-            <h2 class="about__article__title">
+            <h2 class="about__title">
                 Xavier de Rosnay & Gaspard Auge
             </h2>
-            <div class="about__article__paragraph-container">
-                <p class="about__article__paragraph">
+            <div class="about__paragraph-container">
+                <p class="about__paragraph">
                     Xavier De Ronsay and Gaspard Augé had a few
                     mutual friends, who happened to run a record label,
                     seeking tracks for a compilation. With an immediate
@@ -58,7 +58,7 @@
                     who boasted Daft Punk as former clients. One week
                     later, they were in his office, signing a record deal.
                 </p>
-                <p class="about__article__paragraph">
+                <p class="about__paragraph">
                     Xavier De Ronsay and Gaspard Augé had a few
                     mutual friends, who happened to run a record label,
                     seeking tracks for a compilation. With an immediate
@@ -98,10 +98,10 @@
         <div class="comments__formContainer">
             <div class="comments__user-profile-pic"></div>
             <form class="comments__form">
-                <label for="name" class="comments__form__label">NAME</label>
-                <input type="text" class="comments__form__input" id="name-input" name="name" placeholder="Mohan Muruge">
-                <label for="comment" class="comments__form__label">COMMENT</label>
-                <textarea name="comment" cols="25" rows="4" class="comments__form__input" id="comment-input" placeholder="Add new comment"></textarea>
+                <label for="name-input" class="comments__form__label">NAME</label>
+                <input type="text" class="comments__form__input" id="name-input" name="name-input" placeholder="Mohan Muruge">
+                <label for="comment-input" class="comments__form__label">COMMENT</label>
+                <textarea name="comment-input" class="comments__form__input comments__textarea" id="comment-input" placeholder="Add new comment"></textarea>
                 <button class="comments__form__submit" id="submit-button">COMMENT</button>
             </form>
         </div>

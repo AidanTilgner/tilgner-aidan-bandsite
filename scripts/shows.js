@@ -52,10 +52,6 @@ function loadShowDates(){
     //buy tickets button
     newElement('button', 'shows__show__buy-tickets-button', shows.length);
 
-    for (let i = 0; i < shows.length; i++){
-
-    }
-
     //what to append to what:
     function appendToMultipleElements(targetClassName, appenderClassName){
         let target = document.querySelectorAll(targetClassName);

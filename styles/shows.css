@@ -79,6 +79,7 @@
 .hero__soundcloud-player {
   width: 90%;
   height: 10rem;
+  border: none;
 }
 @media (min-width: 768px) {
   .hero__soundcloud-player {
