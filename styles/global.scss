@@ -26,7 +26,7 @@ body {
 
     @include tablet {
         flex-direction: row;
-        height: 16vh;
+        height: 8rem;
         padding-inline-start: 2.4rem;
     }
 
@@ -50,15 +50,15 @@ body {
             font-size: $h1;
             margin-right: 5.6rem;
         }
+    }
 
-        &__link {
-            display: inline-block;
-        }
+    &__link {
+        display: inline-block;
+    }
 
-        &__image {
-            height: 2rem;
-            padding: 1.5rem;
-        }
+    &__image {
+        height: 2rem;
+        padding: 1.5rem;
     }
 
     &__nav-items {
@@ -80,45 +80,43 @@ body {
         @include tablet {
             height: 100%;
         }
+    }
 
-        &__nav-item {
-            width: 50%;
-            text-align: center;
-            font-weight: 500;
-            padding-bottom: 1rem;
-
-
-            @include tablet {
-                padding-top: 1.5rem;
-                margin: 0 4rem;
-                width: 14rem;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            @include desktop {
-                font-size: $h2;
-                width: 12rem;
-                margin-right: 5.6rem;
-            }
-
-            .nav-link-active {
-                opacity: 1;
-            }
+    &__nav-item {
+        width: 50%;
+        text-align: center;
+        font-weight: 500;
+        padding-bottom: 1rem;
+        
+        @include tablet {
+            padding-top: 1.5rem;
+            margin: 0 4rem;
+            width: 14rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
-        &__link {
-            display: inline-block;
-            text-decoration: none;
-            color: $off-white;
-            opacity: .7;
-            font-size: $mobileh2;
-            font-weight: 500;
+        @include desktop {
+            font-size: $h2;
+            width: 12rem;
+            margin-right: 5.6rem;
+        }
 
-            @include tablet {
-                font-size: $h2;
-            }
+        .nav-link-active {
+            opacity: 1;
+        }
+    }
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        color: $off-white;
+        opacity: .7;
+        font-size: $mobileh2;
+        font-weight: 500;
+
+        @include tablet {
+            font-size: $h2;
         }
     }
 }

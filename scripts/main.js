@@ -1,6 +1,6 @@
 //adding all the elements to the page
 
-function loadCommentSection(){
+function displayComments(obj){
     //assign body element to a variable
     const body = document.querySelector('body');
 
@@ -16,13 +16,13 @@ function loadCommentSection(){
     }
 
     //creates new elements
-    newElement('div', 'comments__comment-container', comments.length);
-    newElement('div', 'comments__profile-pic', comments.length);
-    newElement('div', 'comments__comment-text', comments.length);
-    newElement('p', 'comments__comment-text__name', comments.length);
-    newElement('p', 'comments__comment-text__comment', comments.length);
-    newElement('p', 'comments__comment-text__timestamp', comments.length);
-    newElement('img', 'comments__comment-text__delete', comments.length);
+    newElement('div', 'comments__comment-container', obj.length);
+    newElement('div', 'comments__profile-pic', obj.length);
+    newElement('div', 'comments__comment-text', obj.length);
+    newElement('p', 'comments__comment-text__name', obj.length);
+    newElement('p', 'comments__comment-text__comment', obj.length);
+    newElement('p', 'comments__comment-text__timestamp', obj.length);
+    newElement('img', 'comments__comment-text__delete', obj.length);
 
 
     //appends given element by classname to another given element
@@ -57,21 +57,21 @@ function loadCommentSection(){
         let targetElement = document.querySelectorAll('.comments__comment-text__name');
         console.log(targetElement);
         for (let i = 0; i < targetElement.length; i++){
-            targetElement[i].innerText = comments[i].name;
+            targetElement[i].innerText = obj[i].name;
         }
     }
 
     function modifyTimestampText(){
         let targetElement = document.querySelectorAll('.comments__comment-text__timestamp');
         for (let i = 0; i < targetElement.length; i++){
-            targetElement[i].innerText = comments[i].timestamp;
+            targetElement[i].innerText = obj[i].timestamp;
         }
     }
 
     function modifyCommentText(){
         let targetElement = document.querySelectorAll('.comments__comment-text__comment');
         for (let i = 0; i < targetElement.length; i++){
-            targetElement[i].innerText = comments[i].comment;
+            targetElement[i].innerText = obj[i].comment;
         }
     }
 
@@ -91,9 +91,10 @@ function loadCommentSection(){
     modifyTimestampText();
     modifyCommentText();
 
-    console.log(comments);
+    console.log(obj);
     //add event listeners 
 }
+
 //Variable to set api url
 let apiURL = "https://project-1-api.herokuapp.com";
 let endPoint = "/comments";
@@ -108,7 +109,7 @@ function createComments (){
         .then((response) => {
             comments = response.data;   
             console.log(comments);
-            loadCommentSection();
+            displayComments(comments);
         }).catch((err) => {
             console.error(err);
         })
@@ -169,10 +170,15 @@ function submitForm (e){
 
     //adds new comment to comment array
     addToComments(getInput('name-input'), getInput('comment-input'), todaysDate);
+
+    let inputValues = document.querySelectorAll('.comments__form__input')
+    inputValues.forEach((el) => {
+        el.value = '';
+    })
 }
 
 //adds an event modifier to the submit button
-submitButton.addEventListener('click', submitForm);
+submitButton.addEventListener('submit', submitForm);
 
 //give input container cool outline when clicked
 let inputBox = document.getElementsByClassName('comments__form__input');

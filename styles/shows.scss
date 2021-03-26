@@ -57,6 +57,7 @@
     &__soundcloud-player{
         width: 90%;
         height: 10rem;
+        border: none;
 
         @include tablet{
             width: 60%;
