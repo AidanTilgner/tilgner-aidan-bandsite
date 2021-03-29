@@ -65,17 +65,18 @@ body {
         display: flex;
         flex-direction: column;
 
+        &__title {
+                font-size: $mobileh1;
+                padding-top: 1rem;
+
+                @include tablet {
+                    font-size: $h1;
+                }
+                
+            }
     }
 
-    &__title {
-        font-size: $mobileh1;
-        padding-top: 1rem;
-
-        @include tablet {
-            font-size: $h1;
-        }
-        
-    }
+    
 
     &__image {
         @include desktop {
@@ -92,7 +93,7 @@ body {
         @include tablet {
             font-size: $h2;
             font-weight: 700;
-            line-height: 2.2rem;
+            line-height: 3.2rem;
         }
 
         @include desktop {
@@ -123,7 +124,7 @@ body {
         }
 
     }
-    
+
     &__title {
         font-size: $mobileh2;
         font-weight: 500;
@@ -419,17 +420,6 @@ body {
 
             @include tablet{
                 width: 100%;
-            }
-        }
-
-        &__delete {
-            height: 1.6rem;
-            width: 1.6rem;
-            margin-top: 1.6rem;
-            opacity: .6;
-
-            &:hover{
-                opacity: 1;
             }
         }
     }

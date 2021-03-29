@@ -22,7 +22,6 @@ function displayComments(obj){
     newElement('p', 'comments__comment-text__name', obj.length);
     newElement('p', 'comments__comment-text__comment', obj.length);
     newElement('p', 'comments__comment-text__timestamp', obj.length);
-    newElement('img', 'comments__comment-text__delete', obj.length);
 
 
     //appends given element by classname to another given element
@@ -49,7 +48,6 @@ function displayComments(obj){
     appendToElement('.comments__comment-text', '.comments__comment-text__name');
     appendToElement('.comments__comment-text', '.comments__comment-text__timestamp');
     appendToElement('.comments__comment-text', '.comments__comment-text__comment');
-    appendToElement('.comments__comment-text', '.comments__comment-text__delete');
 
 
     //functions to add text to comments
@@ -74,17 +72,6 @@ function displayComments(obj){
             targetElement[i].innerText = obj[i].comment;
         }
     }
-
-    function addAttributes(identifier, attr, attributeValue){
-        let el = document.querySelectorAll(identifier);
-        for(let i = 0; i < el.length; i++){
-            el[i].setAttribute(attr, attributeValue);
-            console.log('Added');
-        }
-    }
-
-    addAttributes('.comments__comment-text__delete', 'src', '../assets/Images/minus-round-line.png');
-    addAttributes
 
     //runs functions to add text
     modifyNameText();
@@ -175,10 +162,12 @@ function submitForm (e){
     inputValues.forEach((el) => {
         el.value = '';
     })
+
+    console.log('New Comment')
 }
 
 //adds an event modifier to the submit button
-submitButton.addEventListener('submit', submitForm);
+submitButton.addEventListener('click', submitForm);
 
 //give input container cool outline when clicked
 let inputBox = document.getElementsByClassName('comments__form__input');
